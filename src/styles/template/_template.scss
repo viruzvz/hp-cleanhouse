@@ -1,0 +1,133 @@
+// SET COLORS BACKGROUNDS
+.set-bgcolor--primary {background-color: $primary}
+.set-bgcolor--secondary {background-color: $secondary}
+.set-bgcolor--dark {background-color: $dark}
+.set-bgcolor--black {background-color: black}
+.set-bgcolor--purplewine {background-color: $purplewine}
+.set-bgcolor--lowgray {background-color: $lowgray}
+.set-bgcolor--white {background-color: white}
+.set-bgcolor--tertiary {background-color: $tertiary}
+.set-bgcolor--secondaryTransition {background-color: $secondaryTransition}
+.set-bgcolor--navGradient {background: linear-gradient(0deg, rgba(249,249,249,1) 0%, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 100%);}
+.set-bgcolor--socialmedia {background-color: $socialmedia;}
+.set-bgcolor--bluegray {background-color: $bluegray;}
+.set-bgcolor--purpledark {background-color: $purpledark;}
+.set-bgcolor--blueeco {background-color: $blue-eco}
+// SET COLORS TEXT
+.set-color--primary {color: $primary}
+.set-color--white {color: white}
+.set-color--tertiary {color: $tertiary}
+.set-color--lightgray {color: $lightgray}
+.set-color--purplewine {color: $purplewine}
+.set-color--secondaryTransition {color: $secondaryTransition}
+.set-color--socialmedia{color: $socialmedia}
+.set-color--bluegray {color: $bluegray;}
+.set-color--purpledark {color: $purpledark;}
+.set-color--black {color: black}
+.set-color--hardgray {color: $hardgray}
+.set-color--mediumgray {color: $mediumgray}
+.set-color--title {color: $title}
+.set-color--whats {color: $whats}
+.set-color--blueeco {color: $blue-eco}
+// SET LINKS
+.theme {
+	.active {
+		color:$primary !important;
+		border-bottom: 5px solid $primary
+	}
+}
+.set-link--zoom {
+	transform: .2s;
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+.set-linkexternal {
+	transition: 0.3s;
+	&:after {
+		content:'⤯';
+		position: absolute;
+		right: -5px;
+		font-weight: bold;
+	}
+}
+.set-colorlink--primary {
+	transition: 0.3s;
+	color: $secondary;
+	&:hover {
+		color: $primary;
+		text-decoration: none;
+	}
+}
+.set-colorlink--white {
+	transition: 0.3s;
+	color: white;
+	&:hover {
+		color: $bluegray;
+		text-decoration: none;
+	}
+}
+.set-colorlink--whats {
+	transition: 0.3s;
+	color: $whats;
+	&:hover {
+		color: $tertiary;
+		text-decoration: none;
+	}
+}
+// SET BORDERS
+.set-border--bottom {border-bottom: 2px solid }
+.set-border--text {
+	-webkit-text-fill-color: $primary; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+}
+.set-border--text-gray {
+	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: gray;
+}
+// SET SIZE
+.set-size--xs {font-size:12px}
+.set-size--sm {font-size:14px}
+.set-size--md {font-size:16px}
+.set-size--lg {font-size:18px}
+.set-size--xl {font-size:20px}
+.set-size--xxl {font-size:30px}
+.set-size--giant {font-size:60px}
+.set-size--xgiant {font-size:72px}
+
+// @media (max-width:760px) {
+// .set-size--giant {font-size:16px}
+// }
+// SET SHADOW
+.set-text--shadow {
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.68);
+}
+// SET IMG STYLE 
+.set-img-rounded {
+	border-radius: 50%;
+}
+// ALL CLASSES
+.divider {
+	height: 10px;
+}
+
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.item {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+	flex: 1;
+	margin: 5px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+	.d-flex {
+		flex-direction: column;
+	}
+  }
