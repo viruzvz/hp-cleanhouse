@@ -101,6 +101,9 @@
 // .set-size--giant {font-size:16px}
 // }
 // SET SHADOW
+body {
+	background-color: white !important;
+}
 .set-text--shadow {
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.68);
 }
