@@ -18,7 +18,9 @@
 .set-color--white {color: white}
 .set-color--tertiary {color: $tertiary}
 .set-color--lightgray {color: $lightgray}
+.set-color--lighgray2 {color: #666}
 .set-color--purplewine {color: $purplewine}
+.set-color--green {color: #2b9e00}
 .set-color--secondaryTransition {color: $secondaryTransition}
 .set-color--socialmedia{color: $socialmedia}
 .set-color--bluegray {color: $bluegray;}
@@ -96,6 +98,7 @@
 .set-size--xxl {font-size:30px}
 .set-size--giant {font-size:60px}
 .set-size--xgiant {font-size:72px}
+.set-size--xxgiant {font-size:92px}
 
 // @media (max-width:760px) {
 // .set-size--giant {font-size:16px}
@@ -104,6 +107,8 @@
 body {
 	background-color: white !important;
 }
+
+
 .set-text--shadow {
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.68);
 }
@@ -124,10 +129,48 @@ body {
 .item {
 	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
 	flex: 1;
-	margin: 5px;
+	margin: 0;
 }
-
-
+.input-color-dark {
+	input, textarea {background-color: rgba(255, 255, 255, 0.05);}
+	
+}
+.animation-element {
+	opacity: 0;
+	position: relative;
+}
+.animation-element.slide-left {
+	transform: translate3d(-100px, 0px, 0px);
+	transition: all 500ms linear;
+	opacity: 0;
+}
+.animation-element.slide-left.in-view {
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+	top: 0;
+	z-index: 2;
+}
+// .active {
+// 	text-decoration: none;
+//     background-color: #eeeeee;
+// }
+.position-fixed {
+	position: fixed;
+}
+.top {}
+.bottom {bottom:15px;}
+.left {}
+.right {right: 15px;}
+.context-menu {
+	cursor: context-menu;
+	&:hover {
+		text-decoration: none;
+	}
+}
 
 @media only screen and (max-width: 992px) {
 	.d-flex {

@@ -1,18 +1,19 @@
 .topo {
-  background-image: url('../../images/reciclagem-topo.png');
-  background-repeat: no-repeat;
-  background-position: 75% 20%;
   border-bottom: 1px solid @gray-color;
   margin-bottom: 2px;
 }
 .right {
   text-align: right;
 }
+.navbar-brand {
+  padding: 10px;
+}
 .nav-eco {
-  background-color: #349901;
+  background-color: #333;
   border-top:1px solid @gray-color;
   border-bottom: 2px solid @gray-color;
   box-shadow: 0px 1px 3px 0px @gray-color;
+  margin-bottom: 0;
 }
 .logo-bike {
   position: absolute;
@@ -22,9 +23,10 @@
 }
 .links-ecoexpress {
   color:#fff;
+  transition: 0.5s ease-in-out;
   &:hover {
-    background-color: @master-color !important;
-    color:#afcc60;
+    background-color: #444 !important;
+    color:#2b9e00;
   }
 }
 .navbar-toggle {
