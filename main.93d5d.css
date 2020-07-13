@@ -5,7 +5,7 @@
     background-color: #83546a;
 }
 .set-bgcolor--dark {
-    background-color: #333;
+    background-color: #1e2832;
 }
 .set-bgcolor--black {
     background-color: black;
@@ -52,8 +52,14 @@
 .set-color--lightgray {
     color: #ccc;
 }
+.set-color--lighgray2 {
+    color: #666;
+}
 .set-color--purplewine {
     color: #4d2c39;
+}
+.set-color--green {
+    color: #2b9e00;
 }
 .set-color--secondaryTransition {
     color: #fff8f2;
@@ -165,6 +171,9 @@
 .set-size--xgiant {
     font-size: 72px;
 }
+.set-size--xxgiant {
+    font-size: 92px;
+}
 body {
     background-color: white !important;
 }
@@ -184,7 +193,45 @@ body {
 }
 .item {
     flex: 1;
-    margin: 5px;
+    margin: 0;
+}
+.input-color-dark input,
+.input-color-dark textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.animation-element {
+    opacity: 0;
+    position: relative;
+}
+.animation-element.slide-left {
+    transform: translate3d(-100px, 0px, 0px);
+    transition: all 500ms linear;
+    opacity: 0;
+}
+.animation-element.slide-left.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.position-fixed {
+    position: fixed;
+}
+.bottom {
+    bottom: 15px;
+}
+.right {
+    right: 15px;
+}
+.context-menu {
+    cursor: context-menu;
+}
+.context-menu:hover {
+    text-decoration: none;
 }
 @media only screen and (max-width: 992px) {
     .d-flex {
@@ -444,9 +491,9 @@ th {
 }
 @font-face {
     font-family: "Glyphicons Halflings";
-    src: url(/fonts/glyphicons-halflings-regular.eot);
-    src: url(/fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(/fonts/glyphicons-halflings-regular.woff2) format("woff2"), url(/fonts/glyphicons-halflings-regular.woff) format("woff"),
-        url(/fonts/glyphicons-halflings-regular.ttf) format("truetype"), url(/70ef52eba2e8cab6b3e6f93ceb42e458.svg#glyphicons_halflingsregular) format("svg");
+    src: url(fonts/glyphicons-halflings-regular.eot);
+    src: url(fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(fonts/glyphicons-halflings-regular.woff2) format("woff2"), url(fonts/glyphicons-halflings-regular.woff) format("woff"),
+        url(fonts/glyphicons-halflings-regular.ttf) format("truetype"), url(/70ef52eba2e8cab6b3e6f93ceb42e458.svg#glyphicons_halflingsregular) format("svg");
 }
 .glyphicon {
     position: relative;
@@ -7113,20 +7160,21 @@ button.close {
     margin-right: 60px !important;
 }
 .topo {
-    background-image: url(../assets/61f035209d5d765bb8fc57d5e4a27edb.png);
-    background-repeat: no-repeat;
-    background-position: 75% 20%;
     border-bottom: 1px solid #666;
     margin-bottom: 2px;
 }
 .right {
     text-align: right;
 }
+.navbar-brand {
+    padding: 10px;
+}
 .nav-eco {
-    background-color: #349901;
+    background-color: #333;
     border-top: 1px solid #666;
     border-bottom: 2px solid #666;
     box-shadow: 0 1px 3px 0 #666;
+    margin-bottom: 0;
 }
 .logo-bike {
     position: absolute;
@@ -7136,10 +7184,11 @@ button.close {
 }
 .links-ecoexpress {
     color: #fff;
+    transition: 0.5s ease-in-out;
 }
 .links-ecoexpress:hover {
-    background-color: #0076be !important;
-    color: #afcc60;
+    background-color: #444 !important;
+    color: #2b9e00;
 }
 .navbar-toggle {
     background-color: #0076be;
@@ -7176,10 +7225,24 @@ body {
 }
 .header1 {
     margin-bottom: 0;
+    font-family: "Signika-Regular";
 }
 .header2 {
     margin-bottom: 15px;
     margin-top: 0;
+    font-family: "Signika-Regular";
+}
+@font-face {
+    font-family: "Signika-Regular";
+    src: url(fonts/Signika-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "advent-pro-bold";
+    src: url(fonts/advent-pro-bold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 .controle {
     min-height: 284px;
@@ -7209,17 +7272,18 @@ body {
     }
 }
 .ecoexpress {
-    background-color: #dceff9;
     border-bottom: 4px solid #ccc;
 }
 .bike-bg {
-    background-image: url(../assets/e911c59678417652ca98b59497419552.png);
     background-repeat: no-repeat;
     background-position: right 50px;
     min-height: 320px;
 }
 .servicos {
-    background-color: #eaffdb;
+    background-color: #f9f9f9;
+}
+.servicos-dt {
+    background-color: transparent;
 }
 .box {
     background-color: #fff;
@@ -7246,6 +7310,41 @@ body {
 }
 .sub-footer a {
     color: #afcc60;
+}
+.parallax-parent--bg {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #fcf6db;
+    background-size: contain, cover;
+}
+.set-background-logo {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.parallax {
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-img {
+    background-image: url(05cb28e032df636046b23bbd3f4f9d5f.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.parallax-img--2 {
+    background-image: url(d542fc1489c1589c056798ab3a368b91.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 .ekko-lightbox {
     display: flex !important;
