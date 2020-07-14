@@ -100,6 +100,7 @@
 .set-size--xgiant {font-size:72px}
 .set-size--xxgiant {font-size:92px}
 
+
 // @media (max-width:760px) {
 // .set-size--giant {font-size:16px}
 // }
@@ -154,6 +155,9 @@ body {
 	top: 0;
 	z-index: 2;
 }
+.whatsapp {
+	z-index: 2;
+}
 // .active {
 // 	text-decoration: none;
 //     background-color: #eeeeee;
@@ -171,7 +175,10 @@ body {
 		text-decoration: none;
 	}
 }
+@media (max-width: 768px) { 
 
+	.set-size--xxgiant {font-size:42px}
+ }
 @media only screen and (max-width: 992px) {
 	.d-flex {
 		flex-direction: column;
