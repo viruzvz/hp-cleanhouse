@@ -60,7 +60,7 @@ section.servicos.py-4.page-section
             li  1 sofá 
             li  2 tapetes de até 4 m² 
           .set-size--xxl.text-center
-            .label.label-success  R$ 500,00
+            .label.label-success  R$ 350,00
       .col-md-6
         .jumbotron
           h3 PACOTE HIGIENIZAÇÃO RESIDENCIAL 2
@@ -72,7 +72,10 @@ section.servicos.py-4.page-section
             li  2 sofá 
             li  4 tapetes de até 4 m²
           .set-size--xxl.text-center
-            .label.label-success  R$ 1000,00
+            .label.label-success  R$ 600,00
+      .col-md-12
+        .jumbotron.text-center
+          p <b>OBS:</b> Os itens constantes do pacote podem ser alterados conforme sua necessidade (fale com nosso consultor)
     .row
       .col-md-12
         h2.text-center.header2.size-headers--large.color-master
@@ -164,6 +167,9 @@ section.py-4.set-bgcolor--dark
       .col-md-3
         .embed-responsive.embed-responsive-16by9
           iframe(src='https://www.youtube.com/embed/67Rq1DmIl4U', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+      .col-md-3
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://www.youtube.com/embed/JljRcPgowTU', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
 
 section
   .pt-2
@@ -271,19 +277,23 @@ section.contatos.set-bgcolor--dark.py-4.page-section
           p.color-white Residencias /Domicílio
           p.color-white Empresas e Escritórios
           p.color-white Hospitais, Clínicas e Hotéis.
-        form
+        form(action='https://formmail.kinghost.net/formmail.cgi', method='POST')
+          input(type='hidden', name='recipient', value='contato@cleanhouse.eco.br')
+          input(type='hidden', name='redirect', value='https://cleanhouse.eco.br/resposta.html')
+          input(type='hidden', name='subject', value='teste de assunto')
+          input(type='hidden', name='email', value='viruzvz@gmail.com')
           .row
             .col-md-6
               .form-group.input-color-dark
-                input#exampleInputName2.form-control.input-lg(type='text', placeholder='Nome')
+                input.form-control.input-lg(type='text', placeholder='Nome', name='nome')
             .col-md-6
               .form-group.input-color-dark
-                input#exampleInputEmail1.form-control.input-lg(type='email', placeholder='E-mail')
+                input.form-control.input-lg(type='email', placeholder='E-mail' name='replyto')
             .col-md-12
               .form-group.input-color-dark
-                textarea.form-control.input-lg(rows='3' placeholder='Mensagem')
+                textarea.form-control.input-lg(rows='3' placeholder='Mensagem' name='Comentarios')
               .form-group.text-center
-                button.btn.btn-success.btn-lg(type='submit') Enviar
+                button.btn.btn-success.btn-lg(type='submit' name="BTEnvia" value="Enviar") Enviar
               .form-group.text-center
                 p.set-color--white A CleanHouse está nas redes sociais. Segue a gente!
                 p.set-color--white 
@@ -296,5 +306,5 @@ section.contatos.set-bgcolor--dark.py-4.page-section
                     a(href='https://www.instagram.com/cleanhousedf/?hl=pt-br' target='_blank')
                       img(src='assets/icon-instagram-circle.svg' alt='Instagram' width='35px')
 .whatsapp.position-fixed.bottom.right
-  a(href='https://wa.me/5561991141213')
+  a(href='https://wa.me/5561991141213' target='_blank')
     img(src='assets/whatsapp-circle.svg' width='80px')
